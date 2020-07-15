@@ -66,7 +66,6 @@ export enum LineCap {
   Square,
 }
 
-// Pour le traçage du contour
 export interface Contouring {
   type: string;
   points: Point[];
@@ -121,13 +120,6 @@ export const MAX_SPRAYPAINT_RANGE = 150;
 export const SPRAYPAINT_FLOW_SIZE = 25;
 export const SPRAYPAINT_POINT_SIZE = 0.8;
 export const MAX_STROKE_WIDTH = 50;
-export const SHIFT_KEY_CODE = '16';
-export const ALT_KEY_CODE = '18';
-export const ESCAPE_KEY_CODE = '17';
-export const BACKSPACE_KEY_CODE = '8';
-export const SPACE_KEY_CODE = '32';
-export const ENTER_KEY_CODE = '13';
-export const DELETE_KEY_CODE = '46';
 export const MIN_PAINT_BUCKET_TOLERANCE = 0;
 export const MAX_PAINT_BUCKET_TOLERANCE = 100;
 export const DEFAULT_PAINT_BUCKET_TOLERANCE = 10;
