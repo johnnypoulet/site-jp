@@ -5,13 +5,15 @@ import { AppComponent } from './components/app/app.component';
 import { TopBannerComponent } from './components/top-banner/top-banner.component';
 import { SvgComponent } from './components/svg/svg.component';
 import { LayerSvgComponent } from './components/layer-svg/layer-svg.component';
+import { BunzComponent } from './components/bunz/bunz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBannerComponent,
     SvgComponent,
-    LayerSvgComponent
+    LayerSvgComponent,
+    BunzComponent
   ],
   imports: [
     BrowserModule,

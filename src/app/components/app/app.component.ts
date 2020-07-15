@@ -7,10 +7,15 @@ import { LayerControllerService } from 'src/app/services/layer-controller/layer-
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent implements AfterViewInit {
+  title = 'site-jp';
+  myButt = 'radial-nards';
+
   constructor(private drawingService: DrawingService, private detector: ChangeDetectorRef, private controller: LayerControllerService) {
     this.drawingService.sendInitWorkspaceDimensions(this.workspaceDimensions);
     this.drawingService.sendWorkspaceDimensions(this.workspaceDimensions);
+    this.changeButt('Dom DeLouise');
   }
 
   readonly TITLE: string = 'Toutant\'s Website';
@@ -26,6 +31,10 @@ export class AppComponent implements AfterViewInit {
     this.workspaceDimensions[1] = this.workspace.nativeElement.offsetHeight - 1;
     this.drawingService.sendInitWorkspaceDimensions(this.workspaceDimensions);
     this.detector.detectChanges();
+  }
+
+  changeButt(myButt): void {
+    this.myButt = myButt;
   }
 
   // Lit et envoie les dimensions de la zone de travail au component de nouveu dessin.
