@@ -1,4 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -17,6 +22,8 @@ import { BunzComponent } from './components/bunz/bunz.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
     AppRoutingModule
   ],
   providers: [],
