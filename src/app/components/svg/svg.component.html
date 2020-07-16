@@ -1,4 +1,19 @@
 <mat-checkbox>Sinuzite sur la moonbase</mat-checkbox>
+<style>
+div{
+    border: 1px solid black;
+    margin-left: 400px;
+    margin-right: 400px; 
+    }
+
+</style>
+<mat-grid-list cols="3" rowHeight="600px">
+    <mat-grid-tile colspan = "2" style="background-color: rgb(125, 97, 153);">1</mat-grid-tile>
+    <mat-grid-tile style="background-color: rgb(132, 171, 223);">2</mat-grid-tile>
+    <mat-grid-tile style="background-color: rgb(169, 129, 209);">3</mat-grid-tile>
+    <mat-grid-tile style="background-color: rgb(50, 189, 231);">4</mat-grid-tile>
+        
+</mat-grid-list>
 <svg>
   <g #svg>
       <g *ngFor="let i of primitives" [ngSwitch]="i.type" (mousedown)="mouseDownOnPage($event,i);"
