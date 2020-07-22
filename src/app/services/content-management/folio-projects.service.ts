@@ -42,5 +42,6 @@ export class FolioProjectsService {
         projectsToKeep.push(project);
       }
     }
+    this.folioProjects = projectsToKeep;
   }
 }
