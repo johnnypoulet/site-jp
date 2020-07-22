@@ -14,6 +14,17 @@ export enum MouseEventType {
   InvalidEvent,
 }
 
+export enum RoleType {
+  Visitor,
+  Admin,
+  ContentManager
+}
+
+export enum ProjectType {
+  ProjectTypePlaceHolder1,
+  ProjectTypePlaceHolder2
+}
+
 // ----- Constantes Color -----//
 export const MAX_RGB = 255;
 export const MAX_ALPHA = 1;
