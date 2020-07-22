@@ -8,13 +8,10 @@ import { ProjectType } from '../utils/constantsAndEnums';
 })
 export class FolioProjectsService {
   protected folioProjects: FolioProject[];
-  private folioItems: FolioItem[];
-  private projectTypes: ProjectType[];
-  private formProject: FolioProject;
 
   constructor() { }
 
-  private getNumberOfProjects(): number {
+  public getNumberOfProjects(): number {
     return this.folioProjects.length;
   }
 
@@ -65,5 +62,11 @@ export class FolioProjectsService {
         project.folioItems = itemsToKeep;
       }
     });
+  }
+
+  private populateProjectList(): void {
+    if (!this.folioProjects) {
+
+    }
   }
 }
