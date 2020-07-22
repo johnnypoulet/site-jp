@@ -35,7 +35,7 @@ export class FolioProjectsService {
     this.folioProjects.push(project);
   }
 
-  private removeProjectById(id: number): void {
+  public removeProjectById(id: number): void {
     const projectsToKeep: FolioProject[] = [];
     for (const project of this.folioProjects) {
       if (id !== project.id) {
@@ -43,5 +43,27 @@ export class FolioProjectsService {
       }
     }
     this.folioProjects = projectsToKeep;
+  }
+
+  public addItemToProject(item: FolioItem, projectId: number): void {
+    this.folioProjects.forEach(project => {
+      if (projectId === project.id) {
+        project.folioItems.push(item);
+      }
+    });
+  }
+
+  public removeItemFromProject(itemId: number, projectId: number): void {
+    const itemsToKeep: FolioItem[] = [];
+    this.folioProjects.forEach(project => {
+      if (projectId === project.id) {
+        project.folioItems.forEach(item => {
+          if (itemId !== item.id) {
+            itemsToKeep.push(item);
+          }
+        });
+        project.folioItems = itemsToKeep;
+      }
+    });
   }
 }
