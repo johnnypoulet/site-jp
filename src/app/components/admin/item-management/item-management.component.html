@@ -1,0 +1,5 @@
+<h1>Item management page</h1>
+<div>
+    <mat-label>Add new item to project</mat-label>
+    <input matInput type="file" id="file" accept=".json" (change)="readLocalFile($event.target.files[0])" />
+</div>

@@ -1,0 +1,25 @@
+<h1>Project administration page</h1>
+<table>
+    <tr>
+        <td>
+            {{selectedTitle}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <mat-form-field appearance="fill">
+                <mat-label>Select Project</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let projectType of projectTypes">
+                        {{projectType}}
+                    </mat-option>
+                </mat-select>
+                <mat-label>Clearable input</mat-label>
+                <input matInput type="text" [(ngModel)]="selectedTitle">
+                <button mat-button *ngIf="selectedTitle" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                  <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </td>
+    </tr>
+</table>

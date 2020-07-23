@@ -64,6 +64,17 @@ export class FolioProjectsService {
     });
   }
 
+  public updateProject(updatedProject: FolioProject): boolean {
+    this.folioProjects.forEach(project => {
+      if (project.id === updatedProject.id) {
+        project = updatedProject;
+        return true;
+      }
+    });
+    return false;
+  }
+
+  // TODO: déterminer format pour stocker les projets et items
   private populateProjectList(): void {
     if (!this.folioProjects) {
 
